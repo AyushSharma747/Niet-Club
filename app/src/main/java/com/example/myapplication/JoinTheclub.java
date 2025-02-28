@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.Gravity;
+import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
@@ -32,7 +33,10 @@ public class JoinTheclub extends AppCompatActivity {
         facultyText.setPadding(20, 20, 20, 50);
         facultyText.setBackgroundColor(Color.YELLOW);
 
+        EditText entername = new EditText(this);
+        entername.setText("enter.....");
         // ✅ Add TextView to Layout
+        facultyLayout.addView(entername);
         facultyLayout.addView(facultyText);
 
         facultyText.setOnClickListener(v -> {
