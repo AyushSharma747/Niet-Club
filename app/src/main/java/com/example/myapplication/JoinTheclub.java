@@ -16,35 +16,21 @@ public class JoinTheclub extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_join_the_club); // Load XML layout
 
-        // Create Layout
-        LinearLayout facultyLayout = new LinearLayout(this);
-        facultyLayout.setOrientation(LinearLayout.VERTICAL);
-        facultyLayout.setGravity(Gravity.CENTER);
-        facultyLayout.setBackgroundColor(Color.WHITE);
-        facultyLayout.setPadding(20, 50, 20, 50);
+        // Get UI elements
+        EditText nameField = findViewById(R.id.nameField);
+        EditText branchField = findViewById(R.id.branchField);
+        EditText erpField = findViewById(R.id.erpField);
+        EditText yearField = findViewById(R.id.yearField);
+        EditText emailField = findViewById(R.id.emailField);
+        EditText phoneField = findViewById(R.id.phoneField);
+        TextView joinButton = findViewById(R.id.joinButton);
 
-        // Create a TextView for JoinTheclub Screen
-        TextView facultyText = new TextView(this);
-        facultyText.setText(getString(R.string.JoinTheclub));
-        facultyText.setTextSize(24);
-        facultyText.setTextColor(Color.BLACK);
-        facultyText.setGravity(Gravity.CENTER);
-        facultyText.setPadding(20, 20, 20, 50);
-        facultyText.setBackgroundColor(Color.YELLOW);
-
-        EditText entername = new EditText(this);
-        entername.setText("enter.....");
-        // ✅ Add TextView to Layout
-        facultyLayout.addView(entername);
-        facultyLayout.addView(facultyText);
-
-        facultyText.setOnClickListener(v -> {
+        // Button click event
+        joinButton.setOnClickListener(v -> {
             Intent intent = new Intent(JoinTheclub.this, MainActivity.class);
             startActivity(intent);
         });
-
-        // ✅ Set the Layout as the Content View
-        setContentView(facultyLayout);
     }
 }
