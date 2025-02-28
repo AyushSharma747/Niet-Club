@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".MainActivity">
+
+    <!-- App Bar Layout -->
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:title="My App" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!-- Main Content Layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:background="@android:color/white"
+        android:padding="20dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <!-- Question TextView -->
+        <TextView
+            android:id="@+id/question"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="I Want to"
+            android:textSize="24sp"
+            android:textColor="@android:color/black"
+            android:gravity="center"
+            android:padding="20dp"
+            android:background="@color/white"
+
+            android:layout_marginBottom="50dp"/>
+
+        <!-- Create a Club Button -->
+        <TextView
+            android:id="@+id/JOINC"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Join The Club"
+            android:textSize="24sp"
+            android:textColor="@android:color/black"
+            android:gravity="center"
+            android:padding="20dp"
+
+            android:background="@android:color/darker_gray"
+            android:layout_marginBottom="20dp"/>
+
+        <!-- Join the Club Button -->
+        <TextView
+            android:id="@+id/CREATEC"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Create Club"
+            android:textSize="24sp"
+            android:textColor="@android:color/black"
+            android:gravity="center"
+            android:padding="20dp"
+            android:background="@android:color/darker_gray"/>
+    </LinearLayout>
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
